@@ -1,12 +1,16 @@
 version: "3"
 services:
-  app:
-    container_name: app
+  hubot:
+    container_name: hubot
     build:
       context: .
       dockerfile: ./docker/Dockerfile
     restart: always
-    privileged: true
     environment:
       - HUBOT_SLACK_TOKEN=xxxxx
       - EXTERNAL_SCRIPTS=hubot-broadlink-rm
+  pigpiod:
+    container_name: pigpiod
+    image: zinen2/alpine-pigpiod
+    restart: always
+    privileged: true
