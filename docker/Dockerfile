@@ -10,7 +10,7 @@ ENV EXTERNAL_SCRIPTS "hubot-help,hubot-pugme"
 RUN useradd hubot -m
 
 RUN apt-get update
-RUN apt-get install -y nodejs
+RUN apt-get install -y nodejs npm
 RUN npm install -g hubot coffeescript yo generator-hubot
 
 USER hubot
