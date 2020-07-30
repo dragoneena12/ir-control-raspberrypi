@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    restart: always
+    privileged: true
+    environment:
+      - HUBOT_SLACK_TOKEN=xxxxx
+      - EXTERNAL_SCRIPTS=hubot-broadlink-rm
