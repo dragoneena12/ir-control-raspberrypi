@@ -7,7 +7,7 @@ ENV HUBOT_OWNER none
 ENV HUBOT_DESCRIPTION Hubot
 ENV EXTERNAL_SCRIPTS "hubot-help,hubot-pugme"
 
-RUN useradd hubot -m
+RUN adduser -S hubot
 
 RUN npm install -g hubot coffeescript yo generator-hubot
 
