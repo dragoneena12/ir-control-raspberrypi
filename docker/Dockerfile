@@ -1,4 +1,4 @@
-FROM raspbian/stretch
+FROM arm32v6/node:14.6.0-alpine3.10
 
 # hubot environment
 ENV HUBOT_SLACK_TOKEN nope-1234-5678-91011-00e4dd
@@ -9,8 +9,6 @@ ENV EXTERNAL_SCRIPTS "hubot-help,hubot-pugme"
 
 RUN useradd hubot -m
 
-RUN apt-get update
-RUN apt-get install -y nodejs npm
 RUN npm install -g hubot coffeescript yo generator-hubot
 
 USER hubot
