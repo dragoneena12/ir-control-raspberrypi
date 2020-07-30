@@ -8,9 +8,4 @@ services:
     restart: always
     environment:
       - HUBOT_SLACK_TOKEN=xxxxx
-      - EXTERNAL_SCRIPTS=hubot-broadlink-rm
-  pigpiod:
-    container_name: pigpiod
-    image: corbosman/pigpiod
-    restart: always
-    privileged: true
+      - HUBOT_NAME=homebot
