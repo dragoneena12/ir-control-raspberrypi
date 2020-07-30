@@ -9,8 +9,12 @@ ENV EXTERNAL_SCRIPTS "hubot-help,hubot-pugme"
 
 RUN useradd hubot -m
 
-# install npm by n
-RUN curl -L https://git.io/v7kPb | bash
+RUN apt-get update
+RUN apt-get install -y nodejs npm
+RUN npm cache clean
+RUN npm install npm n -g
+RUN n stable
+
 RUN npm install -g hubot coffeescript yo generator-hubot
 
 USER hubot
