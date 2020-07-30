@@ -5,12 +5,12 @@ ENV HUBOT_SLACK_TOKEN nope-1234-5678-91011-00e4dd
 ENV HUBOT_NAME myhubot
 ENV HUBOT_OWNER none
 ENV HUBOT_DESCRIPTION Hubot
-ENV EXTERNAL_SCRIPTS "hubot-help,hubot-pugme"
+ENV EXTERNAL_SCRIPTS "hubot-broadlink-rm"
 
 RUN useradd hubot -m
 
 RUN apt-get update
-RUN apt-get install -y nodejs npm
+RUN apt-get install -y nodejs npm python3 python3-pigpio
 RUN npm cache clean
 RUN npm install npm n -g
 RUN n stable
