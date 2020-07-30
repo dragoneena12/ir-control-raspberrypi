@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.8-nodejs14
+FROM raspbian/stretch
 
 # pigpio environment
 RUN apt-get install -y pigpio python3-pigpio
