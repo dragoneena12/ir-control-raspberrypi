@@ -11,6 +11,6 @@ services:
       - EXTERNAL_SCRIPTS=hubot-broadlink-rm
   pigpiod:
     container_name: pigpiod
-    image: zinen2/alpine-pigpiod
+    image: corbosman/pigpiod
     restart: always
     privileged: true
