@@ -1,7 +1,7 @@
 FROM nikolaik/python-nodejs:python3.8-nodejs14
 
 # pigpio environment
-RUN apt-get -y install pigpio python3-pigpio
+RUN apt-get install -y pigpio python3-pigpio
 RUN systemctl start pigpiod
 RUN echo 'm 17 w   w 17 0   m 18 r   pud 18 u' > /dev/pigpio
 
